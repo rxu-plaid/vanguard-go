@@ -300,6 +300,8 @@ func grpcExtractRequestMeta(contentTypeShort, contentTypePrefix string, headers 
 func grpcExtractResponseMeta(contentTypeShort, contentTypePrefix string, statusCode int, headers http.Header) responseMeta {
 	var respMeta responseMeta
 	contentType := headers.Get("Content-Type")
+	fmt.Println(contentType)
+	fmt.Println(headers)
 	switch {
 	case contentType == contentTypeShort:
 		respMeta.codec = CodecProto
