@@ -1094,6 +1094,7 @@ func (w *responseWriter) WriteHeader(statusCode int) {
 		w.op.client.respCompression = respCompression
 		w.op.server.respCompression = respCompression
 	}
+	fmt.Println(respMeta)
 	if respMeta.codec != "" && respMeta.codec != w.op.server.codec.Name() &&
 		!restHTTPBodyResponse(w.op) {
 		// unexpected content-type for reply
