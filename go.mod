@@ -1,4 +1,4 @@
-module connectrpc.com/vanguard
+module github.com/rxu-plaid/vanguard-go
 
 go 1.21
 
