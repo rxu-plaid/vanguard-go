@@ -77,7 +77,7 @@ func (t *Transcoder) ServeHTTP(writer http.ResponseWriter, request *http.Request
 		op.methodConf.handler.ServeHTTP(writer, request)
 		return
 	}
-
+	fmt.Println("overwritten")
 	op.handle()
 }
 
